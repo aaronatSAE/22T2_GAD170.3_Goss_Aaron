@@ -9,12 +9,14 @@ using UnityEngine;
 [System.Serializable]
 public class TankControls
 {
-    public enum KeyType { Movement, Rotation, Fire }
+    public enum KeyType { Movement, Rotation, Fire, TurretRotation }
 
     public KeyCode forward = KeyCode.W; // the forward button to use
     public KeyCode backwards = KeyCode.S; // the backwards button
     public KeyCode left = KeyCode.A; // the left button
     public KeyCode right = KeyCode.D; // the right button
+    public KeyCode turretLeft = KeyCode.Q;
+    public KeyCode turretRight = KeyCode.E;
     public KeyCode fireButton = KeyCode.Space; // the button to fire
     private bool fireButtonWasPressed = false; // has the fire button been pressed?
 
@@ -50,6 +52,18 @@ public class TankControls
                         currentValue = 1; // we are rotating positively.
                     }
                     else if (Input.GetKey(left))// if we are pressing the left button
+                    {
+                        currentValue = -1; // we are rotating negatively
+                    }
+                    break;
+                }
+            case KeyType.TurretRotation:
+                {
+                    if (Input.GetKey(turretRight)) // if we are pressing the right button
+                    {
+                        currentValue = 1; // we are rotating positively.
+                    }
+                    else if (Input.GetKey(turretLeft))// if we are pressing the left button
                     {
                         currentValue = -1; // we are rotating negatively
                     }

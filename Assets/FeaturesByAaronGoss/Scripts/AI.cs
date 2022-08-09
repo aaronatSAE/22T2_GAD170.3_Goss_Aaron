@@ -25,7 +25,7 @@ namespace AaronGoss
             if (playerTank)
             {
                 // use dot product here to get facings
-                aiTank.tankMovement.HandleMovement(0.4f, 0f);
+                aiTank.tankMovement.HandleMovement(0.4f, 0f, 0f);
                 //aiTankTurret.LookAt(playerTank.transform.position);
                 aiTank.transform.LookAt(playerTank.transform.position);
                 //aiTank.tankMainGun
