@@ -6,7 +6,7 @@ public class CounterAnnouncer : MonoBehaviour
 {
     // We need our EVENTS here
     public delegate void StartAction();
-    public static event StartAction OnStartEvent;
+    public static StartAction OnStartEvent;
 
     private void Start()
     {
