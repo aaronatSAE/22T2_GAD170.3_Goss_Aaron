@@ -97,7 +97,7 @@ public class TankMainGun
     /// <summary>
     /// Called when the fire button has been released
     /// </summary>
-    private void FireWeapon(bool ButtonReleased = false)
+    public void FireWeapon(bool ButtonReleased = false)
     {
         weaponFired = true; // we have fired our weapon
         // spawns in a tank shell at the main gun transform and matches the rotation of the main gun and stores it in the clone GameObject variable

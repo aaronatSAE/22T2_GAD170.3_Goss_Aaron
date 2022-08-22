@@ -67,4 +67,6 @@ public static class TankGameEvents
     /// Called when the round is reset
     /// </summary>
     public static VoidDelegate OnRoundResetEvent;
+
+    public static VoidDelegate OnBoostPadActivatedEvent;
 }

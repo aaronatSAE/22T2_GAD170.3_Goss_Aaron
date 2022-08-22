@@ -51,6 +51,12 @@ public class Tank : MonoBehaviour
         // passes in the values from our key input, to our motor to make it move
         tankMovement.HandleMovement(tankControls.ReturnKeyValue(TankControls.KeyType.Movement), tankControls.ReturnKeyValue(TankControls.KeyType.Rotation), tankControls.ReturnKeyValue(TankControls.KeyType.TurretRotation));
         tankMainGun.UpdateMainGun(tankControls.ReturnKeyValue(TankControls.KeyType.Fire)); // grab the input from the fire key
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            tankMainGun.FireWeapon();
+            Debug.Log("SHOOT");
+        }
     }
 
     /// <summary>
